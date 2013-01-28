@@ -1,8 +1,8 @@
-class BootstrapUiGrailsPlugin {
+class BootstrapFieldsUiGrailsPlugin {
     // the plugin version
     def version = "1.0.RC4"
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "1.3 > *"
+    def grailsVersion = "2.0 > *"
     // the other plugins this plugin depends on
     def dependsOn = [:]
     // resources that are excluded from plugin packaging
@@ -11,27 +11,29 @@ class BootstrapUiGrailsPlugin {
     ]
 
     // TODO Fill in these fields
-    def author = "Marc Palmer"
-    def authorEmail = "marc@grailsrocks.com"
-    def title = "Bootstrap UI"
+    def author = "Simon Pither"
+    def authorEmail = "simon@seoss.co.uk"
+    def title = "Bootstrap Fields UI"
     def description = '''\
-Twitter Bootstrap based UI Set for plugin platform
+Twitter Bootstrap based UI Set for plugin platform.
+Based on and intended to track Marc Palmer's bootstrap-ui plugin but using the fields plugin instead of bean-fields for form rendering.
 '''
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/bootstrap-ui"
+    def documentation = "http://grails.org/plugin/bootstrap-fields-ui"
 
     def license = "APACHE"
 
-    def organization = [name: "Grailsrocks", url: "http://grailsrocks.com/"]
+    def organization = [name: "SEOSS", url: "http://seoss.co.uk/"]
 
     def developers = [
-            [name: "Marc Palmer", email: "marc@grailsrocks.com"]
+            [name: "Marc Palmer", email: "marc@grailsrocks.com"],
+            [name: "Simon Pither", email: "simon@seoss.co.uk"]
     ]
 
-    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPBOOTSTRAPUI" ]
+    //def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPBOOTSTRAPUI" ]
 
-    def scm = [url: "https://github.com/Grailsrocks/grails-bootstrap-ui"]
+    def scm = [url: "https://github.com/seoss/grails-bootstrap-fields-ui"]
 
     def doWithWebDescriptor = { xml ->
         // TODO Implement additions to web.xml (optional), this event occurs before 
@@ -45,7 +47,7 @@ Twitter Bootstrap based UI Set for plugin platform
             ui.Bootstrap.tabs.cssClass = 'nav nav-tabs'
             ui.Bootstrap.field.cssClass = 'input'
             ui.Bootstrap.input.cssClass = 'input-xlarge'
-            ui.Bootstrap.invalid.cssClass = 'invalid'
+            ui.Bootstrap.invalid.cssClass = 'error'
             ui.Bootstrap.table.cssClass = 'table table-striped'
             ui.Bootstrap.tr.cssClass = ''
             ui.Bootstrap.trOdd.cssClass = ''

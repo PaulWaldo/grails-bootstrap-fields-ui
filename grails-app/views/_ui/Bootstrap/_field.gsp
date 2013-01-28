@@ -18,16 +18,16 @@
             ${customErrors}
         </g:if>
         <g:elseif test="${errors}">
-            <g:each in="${errors}" var="err">
-                <p class="error">${err.encodeAsHTML()}</p>
-            </g:each>
+            <span class="help-inline">
+                ${errors.join(', ').encodeAsHTML()}
+            </span>
         </g:elseif>
 
         <g:if test="${customHint}">
             ${customHint}
         </g:if>
         <g:elseif test="${hint}">
-            <p class="help-block">${hint.encodeAsHTML()}</p>
+            <span class="help-block">${hint.encodeAsHTML()}</span>
         </g:elseif>
     </div>
 </div>

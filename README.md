@@ -1,5 +1,5 @@
-grails-bootstrap-fields-ui
-==========================
+bootstrap-fields-ui
+===================
 
 Grails Bootstrap Fields UI Set for use with Platform UI.
 

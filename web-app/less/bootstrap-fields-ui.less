@@ -1,4 +1,21 @@
-@import "bootstrap.less";
+// Copied from Bootstrap mixins.less, duplicated here to work around cross-plugin .less loading
+// Clearfix
+// --------
+// For clearing floats like a boss h5bp.com/q
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  // Fixes Opera/contenteditable bug:
+  // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
 
 // Adapted from https://github.com/twitter/bootstrap/issues/4094
 .display-horizontal {
@@ -24,7 +41,7 @@
   }
   // Remove bottom margin on block level help text since that's accounted for on .control-group
   .display-help-block {
-    margin-top: @baseLineHeight / 2;
+    margin-top: 20px / 2;  // assumes @baseLineHeight is 20px
     margin-bottom: 0;
   }
 }

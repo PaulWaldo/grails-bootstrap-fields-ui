@@ -29,9 +29,10 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.13'
     }
     plugins {
-        build(":tomcat:$grailsVersion",
-              ":hibernate:$grailsVersion",
-              ':release:2.1.0') {
+        build(":tomcat:$grailsVersion", ":hibernate:$grailsVersion") {
+            export = false
+        }
+        build ':release:2.2.1', ':rest-client-builder:1.0.3', {
             export = false
         }
 
@@ -39,9 +40,9 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.2.RC3"
         compile ":fields:1.3" 
         compile ":platform-ui:1.0.RC2"
-        runtime(":less-resources:1.3.0.2") {
+        runtime(":less-resources:1.3.3.2") {
             excludes 'svn'
         }
-        runtime ":twitter-bootstrap:2.2.2"
+        runtime ":twitter-bootstrap:2.3.0"
     }
 }
